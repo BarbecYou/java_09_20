@@ -17,6 +17,7 @@ public class Ember {
 
     public int getSzulEvszam(){
         return Integer.parseInt(this.szulDatum.substring(0, 4));
+
     }
     public int getSzulHonap(){
         return Integer.parseInt(this.szulDatum.split("-")[1]);
@@ -26,7 +27,13 @@ public class Ember {
     }
 
     public int getEletkor(){
-        return LocalDate.now().getYear() - this.getSzulEvszam();
+        int eletkor = 0;
+        if (this.getSzulHonap() > LocalDate.now().getMonthValue()){
+            eletkor = LocalDate.now().getYear() - this.getSzulEvszam() - 1;
+        }else {
+            eletkor = LocalDate.now().getYear() - this.getSzulEvszam();
+        }
+        return eletkor;
     }
 
     @Override
