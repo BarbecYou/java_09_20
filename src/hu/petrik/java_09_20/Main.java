@@ -9,7 +9,7 @@ import java.sql.SQLOutput;
 public class Main {
 
     public static void main(String[] args) {
-        Ember human1 = new Ember("Jancsi", "2003-12-01", "Budapest");
+        Ember human1 = new Ember("Jancsi", "2003-03-11", "Budapest");
         Ember human2 = new Ember("Karcsi", "2006-08-12", "Debrecen");
         Ember human3 = new Ember("Péter", "2002-12-24", "Pécs");
         Ember human4 = new Ember("Jóska", "2001-12-24", "Szeged");

@@ -28,7 +28,8 @@ public class Ember {
 
     public int getEletkor(){
         int eletkor = 0;
-        if (this.getSzulHonap() > LocalDate.now().getMonthValue()){
+
+        if (this.getSzulHonap() > LocalDate.now().getMonthValue() || (this.getSzulNap() > LocalDate.now().getDayOfMonth() && this.getSzulHonap() == LocalDate.now().getMonthValue())){
             eletkor = LocalDate.now().getYear() - this.getSzulEvszam() - 1;
         }else {
             eletkor = LocalDate.now().getYear() - this.getSzulEvszam();
